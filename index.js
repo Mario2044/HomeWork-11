@@ -4,11 +4,13 @@
 // У міру змін виводити вміст масиву на сторінку.
 let arr = [];
 let amount = prompt("Введите количество елементов").split('');
+let uniqueChars;
 console.log(amount)
 for (let i = 0; i < amount.length; i++) {
     if (amount !== "number") {
-        amount.sort() 
+        amount.sort();
+        uniqueChars = [...new Set(amount)];
     }
 }
-console.log(amount);
-console.log(amount.splice(1,3));
+console.log(uniqueChars);
+console.log(uniqueChars.splice(1,3));
