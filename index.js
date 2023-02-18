@@ -3,14 +3,13 @@
 // Видалити елементи з масиву з 2 по 4 (включно!).
 // У міру змін виводити вміст масиву на сторінку.
 let arr = [];
-let amount = prompt("Введите количество елементов").split('');
-let uniqueChars;
+let amount = prompt("Введите любые данные.").split(',');
 console.log(amount)
+amount.sort();
 for (let i = 0; i < amount.length; i++) {
     if (amount !== "number") {
-        amount.sort();
-        uniqueChars = [...new Set(amount)];
+        amount = [...new Set(amount)];
     }
 }
-console.log(uniqueChars);
-console.log(uniqueChars.splice(1,3));
+console.log(amount);
+console.log(amount.splice(1,3));
